@@ -1,6 +1,6 @@
 package com.blankjee.dao;
 
-import com.blankjee.po.Comment;
+import com.blankjee.model.Comment;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 

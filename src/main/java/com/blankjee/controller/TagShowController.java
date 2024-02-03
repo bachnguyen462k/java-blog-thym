@@ -1,6 +1,6 @@
-package com.blankjee.web;
+package com.blankjee.controller;
 
-import com.blankjee.po.Tag;
+import com.blankjee.model.Tag;
 import com.blankjee.service.BlogService;
 import com.blankjee.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
-package com.blankjee.web.admin;
+package com.blankjee.controller.admin;
 
-import com.blankjee.po.User;
+import com.blankjee.model.User;
 import com.blankjee.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

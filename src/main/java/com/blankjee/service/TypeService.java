@@ -1,6 +1,6 @@
 package com.blankjee.service;
 
-import com.blankjee.po.Type;
+import com.blankjee.model.Type;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

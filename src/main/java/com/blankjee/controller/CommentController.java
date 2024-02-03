@@ -1,7 +1,7 @@
-package com.blankjee.web;
+package com.blankjee.controller;
 
-import com.blankjee.po.Comment;
-import com.blankjee.po.User;
+import com.blankjee.model.Comment;
+import com.blankjee.model.User;
 import com.blankjee.service.BlogService;
 import com.blankjee.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;

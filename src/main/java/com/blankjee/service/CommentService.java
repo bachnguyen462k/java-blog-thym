@@ -1,6 +1,6 @@
 package com.blankjee.service;
 
-import com.blankjee.po.Comment;
+import com.blankjee.model.Comment;
 
 import java.util.List;
 

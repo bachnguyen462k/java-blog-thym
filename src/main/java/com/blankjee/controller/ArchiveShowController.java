@@ -1,4 +1,4 @@
-package com.blankjee.web;
+package com.blankjee.controller;
 
 import com.blankjee.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;

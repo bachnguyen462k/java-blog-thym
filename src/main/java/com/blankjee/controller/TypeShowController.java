@@ -1,6 +1,6 @@
-package com.blankjee.web;
+package com.blankjee.controller;
 
-import com.blankjee.po.Type;
+import com.blankjee.model.Type;
 import com.blankjee.service.BlogService;
 import com.blankjee.service.TypeService;
 import com.blankjee.vo.BlogQuery;

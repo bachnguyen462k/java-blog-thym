@@ -1,7 +1,7 @@
-package com.blankjee.web.admin;
+package com.blankjee.controller.admin;
 
-import com.blankjee.po.Blog;
-import com.blankjee.po.User;
+import com.blankjee.model.Blog;
+import com.blankjee.model.User;
 import com.blankjee.service.BlogService;
 import com.blankjee.service.TagService;
 import com.blankjee.service.TypeService;

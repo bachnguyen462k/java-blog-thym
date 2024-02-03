@@ -1,7 +1,7 @@
 package com.blankjee.service.impl;
 
 import com.blankjee.dao.CommentRepository;
-import com.blankjee.po.Comment;
+import com.blankjee.model.Comment;
 import com.blankjee.service.CommentService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

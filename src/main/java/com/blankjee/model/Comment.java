@@ -1,4 +1,4 @@
-package com.blankjee.po;
+package com.blankjee.model;
 
 import javax.persistence.*;
 import java.util.ArrayList;

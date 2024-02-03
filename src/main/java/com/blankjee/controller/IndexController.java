@@ -1,9 +1,11 @@
-package com.blankjee.web;
+package com.blankjee.controller;
 
+import com.blankjee.model.Blog;
 import com.blankjee.service.BlogService;
 import com.blankjee.service.TagService;
 import com.blankjee.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -30,10 +32,12 @@ public class IndexController {
     @GetMapping("/")
     public String index(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                         Model model) {
-        model.addAttribute("page",blogService.listBlog(pageable));
+        Page<Blog> blogs= blogService.listBlog(pageable);
+        model.addAttribute("page",blogs);
         model.addAttribute("types", typeService.listTypeTop(6));
         model.addAttribute("tags", tagService.listTagTop(10));
         model.addAttribute("recommendBlogs", blogService.listRecommendBlogTop(8));
+        model.addAttribute("trendings", blogService.listBlogTrending(5));
         return "index";
     }
 
@@ -49,6 +53,7 @@ public class IndexController {
     @GetMapping("/blog/{id}")
     public String blog(@PathVariable Long id,Model model) {
         model.addAttribute("blog", blogService.getAndConvert(id));
+        model.addAttribute("tags", tagService.listTagTop(10));
         return "blog";
     }
 
@@ -58,4 +63,14 @@ public class IndexController {
         return "_fragments :: newblogList";
     }
 
+
+    @GetMapping("/blogs")
+    public String blogs(@PageableDefault(size = 5, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+                        Model model) {
+        model.addAttribute("page",blogService.listBlog(pageable));
+        model.addAttribute("types", typeService.listTypeTop(6));
+        model.addAttribute("tags", tagService.listTagTop(10));
+        model.addAttribute("recommendBlogs", blogService.listRecommendBlogTop(8));
+        return "search";
+    }
 }

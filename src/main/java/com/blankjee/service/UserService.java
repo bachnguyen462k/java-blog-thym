@@ -1,6 +1,6 @@
 package com.blankjee.service;
 
-import com.blankjee.po.User;
+import com.blankjee.model.User;
 
 
 public interface UserService {

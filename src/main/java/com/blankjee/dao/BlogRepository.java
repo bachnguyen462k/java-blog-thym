@@ -1,6 +1,6 @@
 package com.blankjee.dao;
 
-import com.blankjee.po.Blog;
+import com.blankjee.model.Blog;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -31,4 +31,6 @@ public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificat
 
     @Query("select b from Blog b where function('date_format',b.updateTime,'%Y') = ?1")
     List<Blog> findByYear(String year);
+    @Query("select b from Blog b order by b.views desc")
+    List<Blog> findTopTrending(Pageable pageable);
 }

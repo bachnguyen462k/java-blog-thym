@@ -1,6 +1,6 @@
 package com.blankjee.dao;
 
-import com.blankjee.po.Type;
+import com.blankjee.model.Type;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

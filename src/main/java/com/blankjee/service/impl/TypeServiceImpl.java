@@ -2,7 +2,7 @@ package com.blankjee.service.impl;
 
 import com.blankjee.NotFoundException;
 import com.blankjee.dao.TypeRepository;
-import com.blankjee.po.Type;
+import com.blankjee.model.Type;
 import com.blankjee.service.TypeService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

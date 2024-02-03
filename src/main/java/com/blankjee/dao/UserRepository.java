@@ -1,6 +1,6 @@
 package com.blankjee.dao;
 
-import com.blankjee.po.User;
+import com.blankjee.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

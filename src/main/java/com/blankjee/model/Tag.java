@@ -1,6 +1,4 @@
-package com.blankjee.po;
-
-import org.hibernate.validator.constraints.NotBlank;
+package com.blankjee.model;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -8,19 +6,18 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "t_type")
-public class Type {
+@Table(name = "t_tag")
+public class Tag {
 
     @Id
     @GeneratedValue
     private Long id;
-    @NotBlank(message = "分类名称不能为空")
     private String name;
 
-    @OneToMany(mappedBy = "type")
+    @ManyToMany(mappedBy = "tags")
     private List<Blog> blogs = new ArrayList<>();
 
-    public Type() {
+    public Tag() {
     }
 
     public Long getId() {
@@ -49,7 +46,7 @@ public class Type {
 
     @Override
     public String toString() {
-        return "Type{" +
+        return "Tag{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

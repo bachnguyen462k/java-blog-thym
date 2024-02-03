@@ -1,7 +1,7 @@
 package com.blankjee.service.impl;
 
 import com.blankjee.dao.UserRepository;
-import com.blankjee.po.User;
+import com.blankjee.model.User;
 import com.blankjee.service.UserService;
 import com.blankjee.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;

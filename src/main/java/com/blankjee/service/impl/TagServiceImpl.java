@@ -2,7 +2,7 @@ package com.blankjee.service.impl;
 
 import com.blankjee.NotFoundException;
 import com.blankjee.dao.TagRepository;
-import com.blankjee.po.Tag;
+import com.blankjee.model.Tag;
 import com.blankjee.service.TagService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

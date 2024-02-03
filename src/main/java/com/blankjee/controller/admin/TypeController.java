@@ -1,6 +1,6 @@
-package com.blankjee.web.admin;
+package com.blankjee.controller.admin;
 
-import com.blankjee.po.Type;
+import com.blankjee.model.Type;
 import com.blankjee.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;

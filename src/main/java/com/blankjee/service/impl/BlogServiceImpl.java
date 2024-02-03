@@ -2,8 +2,8 @@ package com.blankjee.service.impl;
 
 import com.blankjee.NotFoundException;
 import com.blankjee.dao.BlogRepository;
-import com.blankjee.po.Blog;
-import com.blankjee.po.Type;
+import com.blankjee.model.Blog;
+import com.blankjee.model.Type;
 import com.blankjee.service.BlogService;
 import com.blankjee.util.MarkdownUtils;
 import com.blankjee.util.MyBeanUtils;
@@ -47,6 +47,7 @@ public class BlogServiceImpl implements BlogService {
         b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
 
         blogRepository.updateViews(id);
+        b.setCoutComment(b.getComments().size());
         return b;
     }
 
@@ -146,4 +147,13 @@ public class BlogServiceImpl implements BlogService {
     public void deleteBlog(Long id) {
         blogRepository.delete(id);
     }
+
+    @Override
+    public  List<Blog> listBlogTrending(int size) {
+        Sort sort = new Sort(Sort.Direction.DESC,"views");
+        Pageable pageable = new PageRequest(0, size, sort);
+        return blogRepository.findTopTrending(pageable);
+    }
+
+
 }

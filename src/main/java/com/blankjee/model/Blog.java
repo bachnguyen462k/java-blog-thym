@@ -1,4 +1,4 @@
-package com.blankjee.po;
+package com.blankjee.model;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -48,7 +48,18 @@ public class Blog {
     @Transient
     private String tagIds;
 
+    @Transient
+    private Integer coutComment=0;
+
     private String description;
+
+    public Integer getCoutComment() {
+        return coutComment;
+    }
+
+    public void setCoutComment(Integer coutComment) {
+        this.coutComment = coutComment;
+    }
 
     public Blog() {
     }

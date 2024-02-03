@@ -1,6 +1,6 @@
 package com.blankjee.service;
 
-import com.blankjee.po.Blog;
+import com.blankjee.model.Blog;
 import com.blankjee.vo.BlogQuery;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -34,4 +34,6 @@ public interface BlogService {
     Blog updateBlog(Long id, Blog blog);
 
     void deleteBlog(Long id);
+
+    List<Blog> listBlogTrending(int i);
 }
